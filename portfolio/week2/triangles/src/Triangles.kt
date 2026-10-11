@@ -1,14 +1,6 @@
 // COMP2850 Portfolio: Week 2
 // Functions for working with triangle geometry
 
-//example to remember
-//val person = Pair("Sarah", 37)
-
-//val person2 = Triple("Joe", 24, 1.75f)
-//val person = Pair("Sarah", 37)
-
-//println(person.first)    // prints Sarah
-//println(person.second)   // prints 37
 
 import kotlin.system.exitProcess
 import kotlin.math.sqrt
@@ -19,18 +11,19 @@ typealias Triangle = Triple<Double,Double,Double>
 
 fun isValidTriangle(triangle: Triangle): Boolean{
 
+    //Triple Collection split
     val (a,b,c) = triangle
+    //each side length should be smaller than the sum of the other two side lengths
     if( (a >= b+c)||(b >= a+c)||(c >= b+a)){
         return false
     }
     
-
+    //Valid Triangle
     return true
 } 
 
 fun triangleArea(triangle: Triangle): Double{
-    
-    //will run with more than 3 but only use first 3 arguments
+    //Triple Collection split
     val (a,b,c) = triangle
 
     //S calculation
