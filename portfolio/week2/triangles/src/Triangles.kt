@@ -10,7 +10,7 @@
 //println(person.first)    // prints Sarah
 //println(person.second)   // prints 37
 
-
+import kotlin.system.exitProcess
 import kotlin.math.sqrt
 
 typealias Triangle = Triple<Double,Double,Double>
@@ -19,8 +19,8 @@ typealias Triangle = Triple<Double,Double,Double>
 
 fun isValidTriangle(triangle: Triangle): Boolean{
 
-    val Triple(a,b,c) = triangle
-    if (a >= b+c)&&(b >= a+c)&&(c >= b+a){
+    val (a,b,c) = triangle
+    if( (a >= b+c)||(b >= a+c)||(c >= b+a)){
         return false
     }
     
@@ -29,16 +29,9 @@ fun isValidTriangle(triangle: Triangle): Boolean{
 } 
 
 fun triangleArea(triangle: Triangle): Double{
-    import kotlin.system.exitProcess
-
-    if (args.size < 3){ //Checking if less than three command line arguments
-        println("Error: values for a, b, c required on command line") //error sentence
-        exitProcess(1)
-    }
+    
     //will run with more than 3 but only use first 3 arguments
-    val a = args[0].toFloat()
-    val b = args[1].toFloat()
-    val c = args[2].toFloat()
+    val (a,b,c) = triangle
 
     //S calculation
     var s = (a + b + c)/2

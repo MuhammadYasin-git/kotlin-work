@@ -1,0 +1,1 @@
+When I first started learning programming, I wrote a tiny Kotlin program that printed XXXXXXXXXXX! to the screen; although it seemed like a very small achievement at the time, it showed me that I could give the computer instructions and receive an immediate response.
