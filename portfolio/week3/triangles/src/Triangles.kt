@@ -25,13 +25,13 @@ fun isValidTriangle(triangle: Triangle): Boolean{
 fun triangleArea(triangle: Triangle): Double{
     //Triple Collection split
     val (a,b,c) = triangle
-
+    require(isValidTriangle(triangle))
     //S calculation
     var s = (a + b + c)/2
 
     //Area calculation
     var area = sqrt(s*(s-a)*(s-b)*(s-c))
-
+   
     //Area printed with 5 decimal point
     return area
 }
