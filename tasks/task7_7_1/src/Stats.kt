@@ -1,1 +1,23 @@
 // Task 7.7.1: statistics functions
+
+fun median(values: List<Float>): Float {
+    require(values.isNotEmpty()) { "Cannot compute the median of an empty list" }
+
+    val sorted = values.sorted()
+    val middle = sorted.size / 2
+
+    return if (sorted.size % 2 == 1) {
+        sorted[middle]
+    } else {
+        (sorted[middle - 1] + sorted[middle]) / 2f
+    }
+}
+
+fun displayStats(values: List<Float>) {
+    require(values.isNotEmpty()) { "Cannot compute statistics for an empty list" }
+
+    println("Minimum: ${values.minOrNull()}")
+    println("Maximum: ${values.maxOrNull()}")
+    println("Mean: ${values.average()}")
+    println("Median: ${median(values)}")
+}
