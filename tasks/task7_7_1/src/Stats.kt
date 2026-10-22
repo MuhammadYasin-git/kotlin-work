@@ -14,7 +14,6 @@ fun median(values: List<Float>): Float {
 }
 
 fun displayStats(values: List<Float>) {
-    require(values.isNotEmpty()) { "Cannot compute statistics for an empty list" }
 
     println("Minimum: ${values.minOrNull()}")
     println("Maximum: ${values.maxOrNull()}")
